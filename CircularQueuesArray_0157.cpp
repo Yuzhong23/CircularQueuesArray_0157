@@ -61,9 +61,19 @@ public:
             else
                 FRONT = FRONT + 1;
         }
-
     }
     
+    void display() {
+
+        //cek apakah atrian kosong
+        if (FRONT == -1) {
+            cout << "Queue is empty\n";
+            return;
+        }
+
+        cout << "\nElements in the queue are...\n";
+
+    }
 
 
 
