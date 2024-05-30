@@ -65,6 +65,9 @@ public:
     
     void display() {
 
+        int FRONT_position = FRONT;
+        int REAR_position = REAR;
+
         //cek apakah atrian kosong
         if (FRONT == -1) {
             cout << "Queue is empty\n";
@@ -99,7 +102,48 @@ public:
     }
 };
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    Queues q;
+    char ch;
+
+    while (true) {
+        try {
+            cout << "Menu" << endl;
+            cout << "1. Implement insert operation" << endl;
+            cout << "2. Implement delete operation" << endl;
+            cout << "3. Display values" << endl;
+            cout << "4. Exit " << endl;
+            cout << "Enter your choise (1-4): ";
+            cin >> ch;
+            cout << endl;
+
+            switch (ch) {
+            case '1': {
+
+                q.insert();
+                break;
+            }
+            case '2': {
+                q.remove();
+                break;
+            }
+            case '3': {
+                q.display();
+                break;
+            }
+            case '4': {
+                return 0;
+            }
+            default: {
+                cout << "Invalid option!!" << endl;
+                break;
+            }
+            }
+        }
+        catch (exception& e) {
+            cout << "Chech fpr the values entered." << endl;
+        }
+    }
+
+    return 0;
 }
