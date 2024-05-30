@@ -47,6 +47,13 @@ public:
             cout << "Queue underflow\n";
             return;
         }
+        cout << "\nThe enelement delete from the queuq is: " << queue_array[FRONT] << "\n";
+
+        // Cek jika antrian hanya memiliki satu elemen
+        if (FRONT == REAR) {
+            FRONT = -1;
+            REAR = -1;
+        }
 
     }
     
